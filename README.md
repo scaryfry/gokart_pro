@@ -3,7 +3,7 @@
 Docker terminal commands: 
 docker container ls  
 docker rm -f 'container id'
-docker run -p 8000:8080 -e SPRING_DATASOURCE_URL="jdbc:mysql://host.docker.internal:3306/gokartusers" gokartapi
+docker run -p 8000:8080 -e SPRING_DATASOURCE_URL="jdbc:postgresql://host.docker.internal:5432/GokartDB" gokartapi
 docker build -t gokartapi .  
 
 Maven commands:
