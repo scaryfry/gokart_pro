@@ -3,17 +3,16 @@ package com.gokart.GokartAPI.Models;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "person")
-public class User {
+@Table(name = "kart")
+public class Kart {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column
-    private String fullName;
+    @Column(name = "kart_number")
+    private int kartNumber;
 
-    // Id Getter/Setter
     public long getId() {
         return id;
     }
@@ -22,12 +21,11 @@ public class User {
         this.id = id;
     }
 
-    // FullName Getter/Setter
-    public String getFullName() {
-        return fullName;
+    public int getKartNumber() {
+        return kartNumber;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setKartNumber(int kartNumber) {
+        this.kartNumber = kartNumber;
     }
 }
